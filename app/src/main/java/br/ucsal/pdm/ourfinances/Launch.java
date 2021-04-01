@@ -1,15 +1,55 @@
 package br.ucsal.pdm.ourfinances;
 
-import android.os.Bundle;
+import java.io.Serializable;
+import java.util.Date;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+public class Launch implements Serializable {
 
-public class Launch extends AppCompatActivity {
+    private Double valor;
+    private String data;
+    private String descricao;
+    private String tipo;
 
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.launch_list_item);
+    public Launch() {
+
+    }
+
+    public Launch(Double valor, String data, String descricao, String tipo) {
+        this.valor = valor;
+        this.data = data;
+        this.descricao = descricao;
+        this.tipo = tipo;
+    }
+
+    public Double getValor() {
+        return valor;
+    }
+
+    public void setValor(Double valor) {
+        this.valor = valor;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 }

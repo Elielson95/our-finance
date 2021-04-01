@@ -13,10 +13,10 @@ public class FormActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
+        setTitle("Lançamentos");
     }
 
     public void mainActivity (View view) {
-        Intent main = new Intent(this, MainActivity.class);
-        startActivity(main);
+        finish();
     }
 }
