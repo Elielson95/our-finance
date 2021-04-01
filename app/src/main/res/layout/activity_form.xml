@@ -35,14 +35,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/launch_value">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input_launch_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="Data"
-            android:inputType="text" />
+            android:hint="Data" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -63,14 +60,47 @@
             android:hint="Descrição" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <RadioGroup
+    android:id="@+id/radiogroup_rec_exp"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:orientation="horizontal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/launch_description">
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:layout_editor_absoluteY="233dp">
+
+        <RadioButton
+            android:id="@+id/launch_rec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Receita" />
+
+        <RadioButton
+            android:id="@+id/launch_exp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:onClick="onRadioButtonClicked"
+            android:text="Despesa"
+            android:textDirection="rtl" />
+    </RadioGroup>
+
     <Button
-        android:id="@+id/launch_save"
+        android:id="@+id/launch_add"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Salvar"
+        android:onClick="adicionar"
+        android:text="Adicionar"
         app:backgroundTint="#4CAF50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -89,36 +119,6 @@
         app:backgroundTint="#4CAF50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/launch_save" />
-
-        <RadioGroup
-        android:id="@+id/radiogroup_rec_exp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/launch_description">
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="233dp">
-
-        <RadioButton
-            android:id="@+id/launch_rec"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Receitas" />
-
-        <RadioButton
-            android:id="@+id/launch_exp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layoutDirection="rtl"
-            android:text="Despesas"
-            android:textDirection="rtl" />
-    </RadioGroup>
+        app:layout_constraintTop_toBottomOf="@+id/launch_add" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

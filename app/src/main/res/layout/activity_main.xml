@@ -78,23 +78,27 @@
         app:layout_constraintVertical_bias="0.526" />
 
     <CheckBox
-        android:id="@+id/checkbox_expenses"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:text="Despesas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_tit_balance" />
-
-    <CheckBox
         android:id="@+id/checkbox_recipes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:checked="true"
+        android:onClick="onCheckboxClicked"
         android:text="Receitas"
         app:layout_constraintBottom_toBottomOf="@+id/checkbox_expenses"
         app:layout_constraintEnd_toStartOf="@+id/checkbox_expenses"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkbox_expenses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:checked="true"
+        android:onClick="onCheckboxClicked"
+        android:text="Despesas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_tit_balance" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

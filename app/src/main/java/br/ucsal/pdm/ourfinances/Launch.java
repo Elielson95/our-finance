@@ -5,6 +5,7 @@ import java.util.Date;
 
 public class Launch implements Serializable {
 
+    private int id;
     private Double valor;
     private String data;
     private String descricao;
@@ -14,11 +15,20 @@ public class Launch implements Serializable {
 
     }
 
-    public Launch(Double valor, String data, String descricao, String tipo) {
+    public Launch(int id, Double valor, String data, String descricao, String tipo) {
+        this.id = id;
         this.valor = valor;
         this.data = data;
         this.descricao = descricao;
         this.tipo = tipo;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Double getValor() {
